@@ -1,0 +1,35 @@
+*{margin: 0px;padding: 0px;list-style: none;font-family: '微软雅黑';}
+#page{max-width: 1200px;margin: 0px auto;}
+.fl{float: left;}
+.fr{float: right;}
+.cl{clear: both;}
+/*main*/
+.bar{width: 100%;height: 6px;background-image: url('http://cdn.socket.io/website/imgs/galaxy.jpg');background-position: 0px -400px;}
+
+/*header*/
+.main-navigation{margin-top: 20px;}
+.main-navigation ul{margin:10px 100px;font:14px '微软雅黑';cursor: pointer;}
+.main-navigation li{list-style: none;}
+
+
+#logo-container{width: 143px;height: 43px;background-image: url('http://cdn.socket.io/website/imgs/logo.svg');display: inline-block;}
+
+
+/*side-navigation*/
+.side-navigation{margin-top:100px;width: 143px;float: left;}
+.side-navigation ul{font: 12px '微软雅黑';color: #999;}
+.side-navigation ul li{text-align: right;margin-top: 10px;height: 12px;width: 100%;}
+.side-navigation ul .on{color: #333;}
+.side-navigation ul .line{border-bottom: 1px solid #eee;}
+
+
+/*site-main*/
+.site-main {float: left;width: 800px;margin-top:100px;margin-left: 60px;margin-bottom: 60px;}
+.site-main h1 {margin-bottom: 20px;font-size: 24px;font-weight:lighter;}
+.site-main h2 {margin: 40px 0px 5px;font-size: 16px;font-weight:lighter;}
+.site-main pre{margin: 5px 0px;padding: 0.3em;padding-left: 0.8em;border-left: 0.5em solid #D8D8D8;background: white;color: rgb(119, 119, 119);font-weight: lighter;font-size: 12px;}
+
+/*debug*/
+
+::-moz-selection{background:#53206B; color:white;} 
+::selection {background:#53206B; color:white;} 
