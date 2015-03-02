@@ -10,5 +10,8 @@ So . What is **puls** ? **+** ?
 2. join . send. exit. list . so. socket.js
 3. maybe , i will write my socket.io~
 
+
+**the api : http://socketio.1473.cn/static/api.html**
+
 :P
 
