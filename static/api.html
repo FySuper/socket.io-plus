@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SocketIO +</title>
+    <meta name="description" content="socketio+">
+    <meta name="keywords" content="socketio,websocket">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bar">
+    </div>
+    <div id="page">
+        <header>  	
+	    	<nav class="main-navigation">
+				<div id="logo-container" class="fl"></a></div>
+				<ul class="fl">
+					<li>api 文档</li>
+				</ul>
+			</nav>
+		</header>
+        <div class="cl">
+        </div>
+        <div class="side-navigation">
+            <ul>
+                <li class="on">socketio基本用法</li>
+                <li class="line"></li>
+                <li class="cl"></li>
+            </ul>
+        </div>
+        <div class="site-main">
+            <h1>怎么使用?</h1>
+
+            <h2>添加两个必要文件!(must)</h2>
+            <pre>
+&lt;script src="http://socketio.1473.cn/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script src="http://socketio.1473.cn/socket.js"&gt;&lt;/script&gt;
+&lt;script &gt;
+            	var socket = new socket('qv');
+            	//通过用户名,并获取socket对象
+            	//特别注意的是socket.me 里面包含着这个用户的唯一id socket.me.id 
+            	//切记要善用socket.me.id这个属性，可以在房间操作中更加灵活
+&lt;/script&gt;
+            </pre>
+
+            <h2>加入房间</h2>
+            <pre>
+&lt;script &gt;
+	//socket.join( 房间名, 回调函数 );					 
+	//接受到消息的时候,回调函数会传回一个msg对象 --> { from: "" , data : "" } msg.from 来源 , msg.data 数据
+	socket.join('game-11', function (msg) {
+		console.log(msg);
+		//{ from: xxx , data :xxx } 
+	});
+&lt;/script&gt;</pre>
+
+            <h2>发送消息</h2>
+            <pre>
+&lt;script &gt;
+ 	socket.send(data, 'game-11');//向目标房间发送消息
+&lt;/script&gt;</pre>
+
+            <h2>获取房间信息</h2>
+            <pre>
+&lt;script &gt;
+ 	//向目标房间发送获取房间信息请求，并用附上回调函数接收
+ 	socket.list('game-11', function (msg) {
+ 		console.log(msg);
+ 		//打印出房间信息
+ 		//里面包含着这个房间有哪些成员
+ 	});
+&lt;/script&gt;</pre>
+
+
+            <h2>退出房间</h2>
+            <pre>
+&lt;script &gt;
+ 	//当你需要退出房间的时候，可以调用socket.exit(房间号)方法，也可以直接关闭浏览器。。他会检测并退出
+ 	socket.exit('game-11');
+&lt;/script&gt;</pre>
+
+
+            <h2 >有什么不好的地方或需要增加的功能请吐槽到<a href="mailto:foru.fy@gmail.com">foru.fy@gmail.com</a>。我会及时改进和完善。</h2>
+        </div>
+    </div>
+</body>
+</html>
